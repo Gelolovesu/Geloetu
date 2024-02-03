@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #envelope {
+            position: relative;
+            width: 200px;
+            height: 120px;
+            background-color: #ffffff;
+            border: 4px solid #dddddd;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        #heart-button {
+            background-color: #ff91a4;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #message-container {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #envelope:hover {
+            transform: scale(1.1);
+        }
+
+        #heart-button:hover {
+            background-color: #ff6b7c;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="envelope" onclick="openEnvelope()">
+        <button id="heart-button">❤</button>
+    </div>
+
+    <div id="message-container">
+        <p>
+            nigga ka ba?
+            <!-- Your message content here -->
+        </p>
+    </div>
+
+    <script>
+        function openEnvelope() {
+            document.getElementById('message-container').style.display = 'flex';
+        }
+    </script>
+
+</body>
+</html>
